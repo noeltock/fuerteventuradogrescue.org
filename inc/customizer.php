@@ -1,8 +1,8 @@
 <?php
 /**
- * Fuerteventura Dog Rescue Theme Customizer.
+ * Shelter Theme Customizer.
  *
- * @package Fuerteventura_Dog_Rescue
+ * @package Shelter
  */
 
 /**
@@ -10,17 +10,17 @@
  *
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
-function fuerte_customize_register( $wp_customize ) {
+function shelter_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 }
-add_action( 'customize_register', 'fuerte_customize_register' );
+add_action( 'customize_register', 'shelter_customize_register' );
 
 /**
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
-function fuerte_customize_preview_js() {
-	wp_enqueue_script( 'fuerte_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+function shelter_customize_preview_js() {
+	wp_enqueue_script( 'shelter_customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
-add_action( 'customize_preview_init', 'fuerte_customize_preview_js' );
+add_action( 'customize_preview_init', 'shelter_customize_preview_js' );

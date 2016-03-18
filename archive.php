@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Fuerteventura_Dog_Rescue
+ * @package Shelter
  */
 
 get_header(); ?>

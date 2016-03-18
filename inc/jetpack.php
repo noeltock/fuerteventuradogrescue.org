@@ -4,7 +4,7 @@
  *
  * @link https://jetpack.com/
  *
- * @package Fuerteventura_Dog_Rescue
+ * @package Shelter
  */
 
 /**
@@ -13,23 +13,23 @@
  * See: https://jetpack.com/support/infinite-scroll/
  * See: https://jetpack.com/support/responsive-videos/
  */
-function fuerte_jetpack_setup() {
+function shelter_jetpack_setup() {
 	// Add theme support for Infinite Scroll.
 	add_theme_support( 'infinite-scroll', array(
 		'container' => 'main',
-		'render'    => 'fuerte_infinite_scroll_render',
+		'render'    => 'shelter_infinite_scroll_render',
 		'footer'    => 'page',
 	) );
 
 	// Add theme support for Responsive Videos.
 	add_theme_support( 'jetpack-responsive-videos' );
 }
-add_action( 'after_setup_theme', 'fuerte_jetpack_setup' );
+add_action( 'after_setup_theme', 'shelter_jetpack_setup' );
 
 /**
  * Custom render function for Infinite Scroll.
  */
-function fuerte_infinite_scroll_render() {
+function shelter_infinite_scroll_render() {
 	while ( have_posts() ) {
 		the_post();
 		if ( is_search() ) :

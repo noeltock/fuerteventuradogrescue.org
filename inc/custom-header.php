@@ -12,33 +12,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Fuerteventura_Dog_Rescue
+ * @package Shelter
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses fuerte_header_style()
+ * @uses shelter_header_style()
  */
-function fuerte_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'fuerte_custom_header_args', array(
+function shelter_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'shelter_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1000,
 		'height'                 => 250,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'fuerte_header_style',
+		'wp-head-callback'       => 'shelter_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'fuerte_custom_header_setup' );
+add_action( 'after_setup_theme', 'shelter_custom_header_setup' );
 
-if ( ! function_exists( 'fuerte_header_style' ) ) :
+if ( ! function_exists( 'shelter_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see fuerte_custom_header_setup().
+ * @see shelter_custom_header_setup().
  */
-function fuerte_header_style() {
+function shelter_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	/*

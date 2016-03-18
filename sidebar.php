@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Fuerteventura_Dog_Rescue
+ * @package Shelter
  */
 
 if ( ! is_active_sidebar( 'sidebar-1' ) ) {
