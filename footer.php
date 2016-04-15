@@ -10,17 +10,18 @@
  */
 
 ?>
-
+		</div><!-- .content-wrap -->
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'shelter' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'shelter' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'shelter' ), 'shelter', '<a href="http://www.noeltock.com" rel="designer">Noel Tock</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- .content-wrap -->
+	<div class="footer-wrap">
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="site-info">
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'shelter' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'shelter' ), 'WordPress' ); ?></a>
+				<span class="sep"> | </span>
+				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'shelter' ), 'shelter', '<a href="http://www.noeltock.com" rel="designer">Noel Tock</a>' ); ?>
+			</div><!-- .site-info -->
+		</footer><!-- #colophon -->
+	</div>
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

@@ -14,10 +14,12 @@ Tags: charity
 @import "bourbon";
 @import "neat";
 @import "normalize";
+@import "accessibility";
 
 $c-text: #888;
 $c-brand1: #52bbb4;
 $c-brandalt: #a2dbd7;
+$c-brandalt2: #54bcb5;
 $c-brand2: #f07530;
 
 * {
@@ -28,17 +30,103 @@ body {
   font-size: 18px;
   font-family: 'proxima-nova', 'Helvetica', sans-serif;
   color: $c-text;
+  line-height: 1.6;
 
   a {
     color: $c-brand1;
+    text-decoration: none;
   }
 
 }
 
-header {
+/* layout */
+
+.header-wrap,
+.footer-wrap {
   background: $c-brandalt;
 }
 
-.content-wrap {
+.nav-wrap {
+  position: relative;
+  @include linear-gradient(lighten($c-brandalt2, 5%), darken($c-brandalt2, 5%));
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
+  overflow: visible;
+  z-index: 1;
+}
+
+.site-content,
+.site-header,
+.main-navigation,
+.site-footer {
   @include outer-container;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+/* header */
+
+.site-header-inner {
+  @include display(flex);
+  color: $c-brandalt2;
+  font-size: 0.8rem;
+  padding-top: 50px;
+
+  .site-header-left {
+    @include flex(1);
+  }
+
+  .site-header-right {
+    @include flex(1);
+    text-align: right;
+  }
+
+}
+
+/* nav */
+
+.main-navigation {
+
+  ul {
+    padding: 0;
+    margin: 0;
+    @include display(flex);
+    list-style: none;
+
+    li {
+      @include flex(1);
+      text-align: center;
+
+      a {
+        color: #fff;
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        text-shadow: 0 1px 1px darken($c-brandalt2, 10%);
+
+        &:hover {
+          color: fade-out(#fff, 0.1);
+        }
+      }
+
+      &:last-child {
+        @include linear-gradient(lighten($c-brand2, 5%), darken($c-brand2, 5%));
+        a {
+          text-shadow: 0 1px 1px darken($c-brand2, 10%);
+        }
+      }
+
+    }
+  }
+
+}
+
+.hero-wrap {
+  background: url('../images/placeholder.jpg') no-repeat center center;
+  background-size: cover;
+  min-height: 300px;
+
+  .hero {
+    @include outer-container;
+  }
+
 }
