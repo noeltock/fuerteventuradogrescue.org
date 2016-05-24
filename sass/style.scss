@@ -16,11 +16,20 @@ Tags: charity
 @import "normalize";
 @import "accessibility";
 
+$desktop: 1001px;
+$tablet: 1000px;
+$mobile: 800px;
+$desktop_mq: "all and ( min-width: #{$desktop})";
+$tablet_mq: "all and ( max-width: #{$tablet})";
+$mobile_mq: "all and ( max-width: #{$mobile})";
+
 $c-text: #888;
 $c-brand1: #52bbb4;
 $c-brandalt: #a2dbd7;
 $c-brandalt2: #54bcb5;
 $c-brand2: #f07530;
+
+/* universal */
 
 * {
   box-sizing: border-box;
@@ -35,6 +44,10 @@ body {
   a {
     color: $c-brand1;
     text-decoration: none;
+  }
+
+  ul {
+    padding-left: 20px;
   }
 
 }
@@ -58,9 +71,25 @@ body {
 .site-header,
 .main-navigation,
 .site-footer {
-  @include outer-container;
-  padding-left: 5%;
-  padding-right: 5%;
+  @include outer-container(1140px);
+  padding-left: 5%!important;
+  padding-right: 5%!important;
+}
+
+.site-content {
+  padding: 40px 0;
+  @include display(flex);
+
+  .content-area {
+    @include flex(1);
+    padding-right: 40px;
+  }
+
+  .widget-area {
+    @include flex(0 0 400px);
+    border-left: 1px solid #ddd;
+    padding-left: 40px;
+  }
 }
 
 /* header */
@@ -69,7 +98,7 @@ body {
   @include display(flex);
   color: $c-brandalt2;
   font-size: 0.8rem;
-  padding-top: 50px;
+  padding-top: 70px;
 
   .site-header-left {
     @include flex(1);
@@ -84,9 +113,26 @@ body {
 
 /* nav */
 
-.main-navigation {
+.mobile-navigation {
 
   ul {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    @include display(flex);
+    list-style: none;
+  }
+
+}
+
+.desktop-navigation {
+
+  @media #{$tablet_mq} {
+    display: none;
+  }
+
+  ul {
+    position: relative;
     padding: 0;
     margin: 0;
     @include display(flex);
@@ -95,6 +141,7 @@ body {
     li {
       @include flex(1);
       text-align: center;
+      font-size: 15px;
 
       a {
         color: #fff;
@@ -106,6 +153,36 @@ body {
         &:hover {
           color: fade-out(#fff, 0.1);
         }
+      }
+
+      &.logo {
+        position: relative;
+        color: transparent;
+        @include flex(0 0 160px);
+
+        &:before {
+          position: absolute;
+          content: '';
+          left: 0;
+          right: 0;
+          top: -55px;
+          height: 160px;
+          width: 160px;
+          background: url('../images/logo.png') no-repeat center center;
+          background-size: cover;
+        }
+
+        @media #{$tablet_mq} {
+          @include flex(0 0 140px);
+          top: 32.5px;
+
+          &:before {
+            height: 140px;
+            width: 140px;
+          }
+
+        }
+
       }
 
       &:last-child {

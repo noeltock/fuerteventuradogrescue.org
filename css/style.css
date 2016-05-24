@@ -221,6 +221,7 @@ th {
 #content[tabindex="-1"]:focus {
   outline: 0; }
 
+/* universal */
 * {
   box-sizing: border-box; }
 
@@ -232,6 +233,8 @@ body {
   body a {
     color: #52bbb4;
     text-decoration: none; }
+  body ul {
+    padding-left: 20px; }
 
 /* layout */
 .header-wrap,
@@ -251,11 +254,11 @@ body {
 .site-header,
 .main-navigation,
 .site-footer {
-  max-width: 68em;
+  max-width: 1140px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 5%;
-  padding-right: 5%; }
+  padding-left: 5% !important;
+  padding-right: 5% !important; }
   .site-content::after,
   .site-header::after,
   .main-navigation::after,
@@ -263,6 +266,35 @@ body {
     clear: both;
     content: "";
     display: table; }
+
+.site-content {
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .site-content .content-area {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    padding-right: 40px; }
+  .site-content .widget-area {
+    -webkit-box-flex: 0;
+    -moz-box-flex: 0;
+    box-flex: 0;
+    -webkit-flex: 0 0 400px;
+    -moz-flex: 0 0 400px;
+    -ms-flex: 0 0 400px;
+    flex: 0 0 400px;
+    border-left: 1px solid #ddd;
+    padding-left: 40px; }
 
 /* header */
 .site-header-inner {
@@ -275,7 +307,7 @@ body {
   display: flex;
   color: #54bcb5;
   font-size: 0.8rem;
-  padding-top: 50px; }
+  padding-top: 70px; }
   .site-header-inner .site-header-left {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -295,7 +327,8 @@ body {
     text-align: right; }
 
 /* nav */
-.main-navigation ul {
+.mobile-navigation ul {
+  position: relative;
   padding: 0;
   margin: 0;
   display: -webkit-box;
@@ -306,7 +339,24 @@ body {
   display: -ms-flexbox;
   display: flex;
   list-style: none; }
-  .main-navigation ul li {
+
+@media all and (max-width: 1000px) {
+  .desktop-navigation {
+    display: none; } }
+
+.desktop-navigation ul {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none; }
+  .desktop-navigation ul li {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
     box-flex: 1;
@@ -314,20 +364,54 @@ body {
     -moz-flex: 1;
     -ms-flex: 1;
     flex: 1;
-    text-align: center; }
-    .main-navigation ul li a {
+    text-align: center;
+    font-size: 15px; }
+    .desktop-navigation ul li a {
       color: #fff;
       display: block;
       height: 50px;
       line-height: 50px;
       text-shadow: 0 1px 1px #3e9f98; }
-      .main-navigation ul li a:hover {
+      .desktop-navigation ul li a:hover {
         color: rgba(255, 255, 255, 0.9); }
-    .main-navigation ul li:last-child {
+    .desktop-navigation ul li.logo {
+      position: relative;
+      color: transparent;
+      -webkit-box-flex: 0;
+      -moz-box-flex: 0;
+      box-flex: 0;
+      -webkit-flex: 0 0 160px;
+      -moz-flex: 0 0 160px;
+      -ms-flex: 0 0 160px;
+      flex: 0 0 160px; }
+      .desktop-navigation ul li.logo:before {
+        position: absolute;
+        content: '';
+        left: 0;
+        right: 0;
+        top: -55px;
+        height: 160px;
+        width: 160px;
+        background: url("../images/logo.png") no-repeat center center;
+        background-size: cover; }
+      @media all and (max-width: 1000px) {
+        .desktop-navigation ul li.logo {
+          -webkit-box-flex: 0;
+          -moz-box-flex: 0;
+          box-flex: 0;
+          -webkit-flex: 0 0 140px;
+          -moz-flex: 0 0 140px;
+          -ms-flex: 0 0 140px;
+          flex: 0 0 140px;
+          top: 32.5px; }
+          .desktop-navigation ul li.logo:before {
+            height: 140px;
+            width: 140px; } }
+    .desktop-navigation ul li:last-child {
       background-color: #f28548;
       background-image: -webkit-linear-gradient(#f28548, #ee6518);
       background-image: linear-gradient(#f28548, #ee6518); }
-      .main-navigation ul li:last-child a {
+      .desktop-navigation ul li:last-child a {
         text-shadow: 0 1px 1px #dd5a10; }
 
 .hero-wrap {

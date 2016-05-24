@@ -41,14 +41,23 @@
 	</div>
 
 	<div class="nav-wrap">
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+		<nav class="desktop-navigation" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- #site-navigation -->
+		</nav>
+		<!--
+		<nav class="mobile-navigation" role="navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		</nav>
+	-->
 	</div>
 
-	<div class="hero-wrap">
-		dsd
-	</div>
+	<?php if ( is_home() ) : ?>
+
+		<div class="hero-wrap">
+
+		</div>
+
+	<?php endif; ?>
 
 	<div class="content-wrap">
 		<div id="content" class="site-content">
