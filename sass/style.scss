@@ -125,6 +125,14 @@ body {
     display: none;
   }
 
+  .mobile-toggle {
+    cursor: pointer;
+  }
+
+  .mobile-content {
+    display: none;
+  }
+
   ul {
     position: relative;
     padding: 0;
@@ -241,6 +249,11 @@ body {
 
 .home-toc {
   @include display(flex);
+
+  @media #{$tablet_mq} {
+    display: block;
+  }
+
 }
 
 .home-toc-item {

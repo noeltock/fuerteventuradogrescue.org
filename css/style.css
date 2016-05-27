@@ -338,6 +338,12 @@ body {
   .mobile-navigation {
     display: none; } }
 
+.mobile-navigation .mobile-toggle {
+  cursor: pointer; }
+
+.mobile-navigation .mobile-content {
+  display: none; }
+
 .mobile-navigation ul {
   position: relative;
   padding: 0;
@@ -450,6 +456,9 @@ body {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex; }
+  @media all and (max-width: 1000px) {
+    .home-toc {
+      display: block; } }
 
 .home-toc-item {
   -webkit-box-flex: 1;

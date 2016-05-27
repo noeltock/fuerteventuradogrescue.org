@@ -26,5 +26,15 @@
 
 <?php wp_footer(); ?>
 
+<script>
+jQuery( document ).ready(function($) {
+	$( ".mobile-toggle" ).click(function() {
+	  $( ".mobile-content" ).slideToggle( "slow", function() {
+	    // Animation complete.
+	  });
+	});
+});
+</script>
+
 </body>
 </html>
