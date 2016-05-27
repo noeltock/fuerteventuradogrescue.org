@@ -20,6 +20,8 @@
 <script src="https://use.typekit.net/lpb6dii.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
+<script src="https://use.fonticons.com/c4aadd25.js"></script>
+
 <?php wp_head(); ?>
 </head>
 
@@ -44,14 +46,12 @@
 		<nav class="desktop-navigation" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav>
-		<!--
 		<nav class="mobile-navigation" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav>
-	-->
 	</div>
 
-	<?php if ( is_home() ) : ?>
+	<?php if ( is_page_template('page-home.php') ) : ?>
 
 		<div class="hero-wrap">
 
