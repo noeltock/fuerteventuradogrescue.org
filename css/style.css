@@ -283,6 +283,9 @@ body {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex; }
+  @media all and (max-width: 1000px) {
+    .site-content {
+      display: block; } }
   .site-content .content-area {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
@@ -302,6 +305,10 @@ body {
     flex: 0 0 400px;
     border-left: 1px solid #ddd;
     padding-left: 40px; }
+    @media all and (max-width: 1000px) {
+      .site-content .widget-area {
+        border: none;
+        padding-left: 0; } }
 
 /* header */
 .site-header-inner {
@@ -339,7 +346,8 @@ body {
     display: none; } }
 
 .mobile-navigation .mobile-toggle {
-  cursor: pointer; }
+  cursor: pointer;
+  padding: 10px 2%; }
 
 .mobile-navigation .mobile-content {
   display: none; }
