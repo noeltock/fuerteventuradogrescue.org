@@ -15,11 +15,24 @@
 
 	<div class="footer-wrap">
 		<footer id="colophon" class="site-footer" role="contentinfo">
-			<div class="site-info">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'shelter' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'shelter' ), 'WordPress' ); ?></a>
-				<span class="sep"> | </span>
-				<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'shelter' ), 'shelter', '<a href="http://www.noeltock.com" rel="designer">Noel Tock</a>' ); ?>
-			</div><!-- .site-info -->
+			<div class="footer-map">
+				&nbsp;
+			</div>
+			<div class="footer-info">
+				<div class="footer-info-inner">
+					<h2>Contact</h2>
+					<p>
+						Fuerteventura Dog Rescue<br/>
+						Ayuntamiento de la Oliva,<br />
+						La Oliva, Fuerteventura<br />
+						Spain<br />
+					</p>
+
+					<p><a href="mailto:info@fuerteventuradogrescue.org">info@fuerteventuradogrescue.org</a></p>
+
+					<div class="fb-like" data-href="https://www.facebook.com/Fuerteventura-Dog-Rescue-628498397166915/" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+				</div>
+			</div>
 		</footer><!-- #colophon -->
 	</div>
 </div><!-- #page -->
@@ -29,7 +42,7 @@
 <script>
 jQuery( document ).ready(function($) {
 	$( ".mobile-toggle" ).click(function() {
-	  $( ".mobile-content" ).slideToggle( "slow", function() {
+	  $( ".mobile-content" ).slideToggle( "fast", function() {
 	    // Animation complete.
 	  });
 	});

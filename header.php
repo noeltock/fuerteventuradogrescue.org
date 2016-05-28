@@ -26,6 +26,16 @@
 </head>
 
 <body <?php body_class(); ?>>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.6&appId=142401569149401";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'shelter' ); ?></a>
 
@@ -36,7 +46,7 @@
 					Registered Charity in Spain since XXXX - NR 123-456
 				</div>
 				<div class="site-header-right">
-					Switch language
+					&nbsp;
 				</div>
 			</div>
 		</header><!-- #masthead -->
@@ -47,7 +57,7 @@
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 		</nav>
 		<nav class="mobile-navigation" role="navigation">
-			<div class="mobile-toggle">Toggle</div>
+			<div class="mobile-toggle"><i class="fa fa-menu"></i></div>
 			<div class="mobile-content">
 				<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			</div>

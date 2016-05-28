@@ -28,6 +28,7 @@ $c-brand1: #52bbb4;
 $c-brandalt: #a2dbd7;
 $c-brandalt2: #54bcb5;
 $c-brand2: #f07530;
+$c-footer: #4baca5;
 
 /* universal */
 
@@ -37,9 +38,11 @@ $c-brand2: #f07530;
 
 body {
   font-size: 18px;
-  font-family: 'proxima-nova', 'Helvetica', sans-serif;
+  font-family: 'neuzeit-grotesk', 'Helvetica', sans-serif;
+  font-weight: 300;
   color: $c-text;
   line-height: 1.6;
+  letter-spacing: 0.03rem;
 
   a {
     color: $c-brand1;
@@ -65,6 +68,9 @@ body {
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
   overflow: visible;
   z-index: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-weight: 400;
 }
 
 .site-content,
@@ -76,8 +82,8 @@ body {
   padding-right: 5%!important;
 
   @media #{$tablet_mq} {
-    padding-left: 2%!important;
-    padding-right: 2%!important;
+    padding-left: 3%!important;
+    padding-right: 3%!important;
   }
 
 }
@@ -93,6 +99,11 @@ body {
   .content-area {
     @include flex(1);
     padding-right: 40px;
+
+    @media #{$tablet_mq} {
+      padding-right: 0;
+    }
+
   }
 
   .widget-area {
@@ -116,12 +127,63 @@ body {
   padding-top: 70px;
 
   .site-header-left {
-    @include flex(1);
+    @include flex(1 0 auto);
   }
 
   .site-header-right {
-    @include flex(1);
+    @include flex(0 1 auto);
     text-align: right;
+  }
+
+}
+
+/* footer */
+
+.footer-wrap {
+  height: 400px;
+  background: $c-footer url('../images/footer-bg.jpg');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: top left;
+  color: #fff;
+
+  @media #{$tablet_mq} {
+    background: $c-footer;
+  }
+
+  a {
+    color: lighten($c-brand1, 20%);
+  }
+
+  .site-footer {
+    @include display(flex);
+    height: 400px;
+
+    .footer-map {
+      @include flex(1);
+
+      @media #{$tablet_mq} {
+        display: none;
+      }
+
+    }
+
+    .footer-info {
+      @include flex(1);
+      @include display(flex);
+      @include align-items(center);
+      @include justify-content(center);
+
+      .footer-info-inner {
+        @include flex(1);
+
+        > *:first-child {
+          margin-top: 0;
+        }
+
+      }
+
+    }
   }
 
 }
@@ -136,11 +198,14 @@ body {
 
   .mobile-toggle {
     cursor: pointer;
-    padding: 10px 2%;
+    padding: 10px 3%;
+    color: #fff;
+    font-size: 1.6rem;
   }
 
   .mobile-content {
     display: none;
+    box-shadow: inset 0 1px 5px darken($c-brand1, 10%);
   }
 
   ul {
@@ -188,7 +253,7 @@ body {
     li {
       @include flex(1);
       text-align: center;
-      font-size: 15px;
+      font-size: 16px;
 
       a {
         color: #fff;
@@ -268,6 +333,16 @@ body {
 
 .home-toc-item {
   @include flex(1);
+  padding-right: 40px;
+
+  &:last-child {
+    padding-right: 0;
+  }
+
+  @media #{$tablet_mq} {
+    padding-right: 0;
+  }
+
 }
 
 .home-toc-icon {
