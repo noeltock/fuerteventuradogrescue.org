@@ -120,11 +120,27 @@ body {
 
 /* header */
 
+.header-wrap {
+  padding-top: 20px;
+  min-height: 80px;
+}
+
+.site-mobile-logo {
+  display: none;
+
+  @media #{$tablet_mq} {
+    display: block;
+    height: 140px;
+    background: url('../images/logo.png') no-repeat center center;
+    background-size: auto 100%;
+  }
+
+}
+
 .site-header-inner {
   @include display(flex);
   color: $c-brandalt2;
   font-size: 0.8rem;
-  padding-top: 70px;
 
   .site-header-left {
     @include flex(1 0 auto);

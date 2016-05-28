@@ -41,6 +41,8 @@
 
 	<div class="header-wrap">
 		<header id="masthead" class="site-header" role="banner">
+			<div class="site-mobile-logo">
+			</div>
 			<div class="site-header-inner">
 				<div class="site-header-left">
 					Registered Charity in Spain since XXXX - NR 123-456

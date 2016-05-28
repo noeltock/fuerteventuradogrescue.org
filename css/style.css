@@ -319,6 +319,19 @@ body {
         padding-left: 0; } }
 
 /* header */
+.header-wrap {
+  padding-top: 20px;
+  min-height: 80px; }
+
+.site-mobile-logo {
+  display: none; }
+  @media all and (max-width: 1000px) {
+    .site-mobile-logo {
+      display: block;
+      height: 140px;
+      background: url("../images/logo.png") no-repeat center center;
+      background-size: auto 100%; } }
+
 .site-header-inner {
   display: -webkit-box;
   display: -moz-box;
@@ -328,8 +341,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   color: #54bcb5;
-  font-size: 0.8rem;
-  padding-top: 70px; }
+  font-size: 0.8rem; }
   .site-header-inner .site-header-left {
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
