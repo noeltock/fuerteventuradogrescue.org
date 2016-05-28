@@ -372,7 +372,8 @@ body {
     .footer-wrap {
       background: #4baca5; } }
   .footer-wrap a {
-    color: #9bd8d4; }
+    color: #9bd8d4;
+    text-decoration: underline; }
   .footer-wrap .site-footer {
     display: -webkit-box;
     display: -moz-box;
