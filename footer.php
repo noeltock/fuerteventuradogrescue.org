@@ -35,6 +35,11 @@
 			</div>
 		</footer><!-- #colophon -->
 	</div>
+
+	<div class="footer-terminal">
+		Registered Charity in the Canary Islands since April 2013 - G1/S1/19399-13/F
+	</div>
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>

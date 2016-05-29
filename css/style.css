@@ -241,7 +241,9 @@ body {
 /* layout */
 .header-wrap,
 .footer-wrap {
-  background: #a2dbd7; }
+  background: #a2dbd7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 .nav-wrap {
   position: relative;
@@ -251,8 +253,6 @@ body {
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
   overflow: visible;
   z-index: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-weight: 400; }
 
 .site-content,
@@ -361,18 +361,26 @@ body {
     text-align: right; }
 
 /* footer */
+.footer-terminal {
+  background: #3c8883;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 14px;
+  color: #c0e6e4; }
+
 .footer-wrap {
   height: 400px;
   background: #4baca5 url("../images/footer-bg.jpg");
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: top left;
-  color: #fff; }
+  color: #fff;
+  font-weight: 400; }
   @media all and (max-width: 1000px) {
     .footer-wrap {
       background: #4baca5; } }
   .footer-wrap a {
-    color: #9bd8d4;
+    color: #c0e6e4;
     text-decoration: underline; }
   .footer-wrap .site-footer {
     display: -webkit-box;

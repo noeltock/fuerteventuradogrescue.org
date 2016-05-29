@@ -45,7 +45,7 @@
 			</div>
 			<div class="site-header-inner">
 				<div class="site-header-left">
-					Registered Charity in Spain since XXXX - NR 123-456
+          &nbsp;
 				</div>
 				<div class="site-header-right">
 					&nbsp;
