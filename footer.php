@@ -25,7 +25,7 @@
 						Fuerteventura Dog Rescue<br/>
 						Ayuntamiento de la Oliva,<br />
 						La Oliva, Fuerteventura<br />
-						Spain<br />
+						Spain (<a href="https://goo.gl/maps/U43qtxJqqhy" target="_blak">Google Maps</a>)<br />
 					</p>
 
 					<p><a href="mailto:info@fuerteventuradogrescue.org">info@fuerteventuradogrescue.org</a></p>
