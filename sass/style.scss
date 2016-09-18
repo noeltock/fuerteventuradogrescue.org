@@ -30,6 +30,17 @@ $c-brandalt2: #54bcb5;
 $c-brand2: #f07530;
 $c-footer: #4baca5;
 
+/* FOUT / typekit */
+
+.wf-loading {
+  color: lighten($c-text, 35%);
+}
+
+.wf-active,
+.wf-inactive {
+  color: $c-text;
+}
+
 /* universal */
 
 * {
@@ -40,7 +51,6 @@ body {
   font-size: 18px;
   font-family: 'neuzeit-grotesk', 'Helvetica', sans-serif;
   font-weight: 300;
-  color: $c-text;
   line-height: 1.6;
   letter-spacing: 0.03rem;
 
@@ -97,8 +107,15 @@ body {
   }
 
   .content-area {
-    @include flex(1);
+    max-width: 700px;
+    margin: 0 auto;
     padding-right: 40px;
+
+    h1.entry-title {
+      color: darken($c-text, 8%);
+      margin-top: 1em;
+      text-align: center;
+    }
 
     @media #{$tablet_mq} {
       padding-right: 0;
@@ -347,6 +364,10 @@ body {
 }
 
 /* Template - Home */
+
+.page-template-page-home .content-area {
+  max-width: 100%;
+}
 
 .home-toc {
   @include display(flex);

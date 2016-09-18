@@ -30,7 +30,7 @@
 			edit_post_link(
 				sprintf(
 					/* translators: %s: Name of current post */
-					esc_html__( 'Edit (only visible if logged-)', 'shelter' ),
+					esc_html__( 'Edit (only visible if logged-in)', 'shelter' ),
 					the_title( '<span class="screen-reader-text">"', '"</span>', false )
 				),
 				'<span class="edit-link">',
