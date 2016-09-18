@@ -23,7 +23,7 @@ $desktop_mq: "all and ( min-width: #{$desktop})";
 $tablet_mq: "all and ( max-width: #{$tablet})";
 $mobile_mq: "all and ( max-width: #{$mobile})";
 
-$c-text: #888;
+$c-text: #777;
 $c-brand1: #52bbb4;
 $c-brandalt: #a2dbd7;
 $c-brandalt2: #54bcb5;
@@ -61,6 +61,11 @@ body {
 
   ul {
     padding-left: 20px;
+  }
+
+  img, figure {
+    max-width: 100%;
+    height: auto;
   }
 
 }

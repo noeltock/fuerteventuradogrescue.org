@@ -223,11 +223,11 @@ th {
 
 /* FOUT / typekit */
 .wf-loading {
-  color: #e1e1e1; }
+  color: #d0d0d0; }
 
 .wf-active,
 .wf-inactive {
-  color: #888; }
+  color: #777; }
 
 /* universal */
 * {
@@ -244,6 +244,9 @@ body {
     text-decoration: none; }
   body ul {
     padding-left: 20px; }
+  body img, body figure {
+    max-width: 100%;
+    height: auto; }
 
 /* layout */
 .header-wrap,
@@ -303,7 +306,7 @@ body {
     margin: 0 auto;
     padding-right: 40px; }
     .site-content .content-area h1.entry-title {
-      color: #747474;
+      color: #636363;
       margin-top: 1em;
       text-align: center; }
     @media all and (max-width: 1000px) {
