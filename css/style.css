@@ -302,7 +302,7 @@ body {
     .site-content {
       display: block; } }
   .site-content .content-area {
-    max-width: 700px;
+    width: 700px;
     margin: 0 auto;
     padding-right: 40px; }
     .site-content .content-area h1.entry-title {
@@ -312,6 +312,9 @@ body {
     @media all and (max-width: 1000px) {
       .site-content .content-area {
         padding-right: 0; } }
+    @media all and (max-width: 700px) {
+      .site-content .content-area {
+        max-width: 100%; } }
   .site-content .widget-area {
     -webkit-box-flex: 0;
     -moz-box-flex: 0;
@@ -574,8 +577,9 @@ body {
       display: table; }
 
 /* Template - Home */
-.page-template-page-home .content-area {
-  max-width: 100%; }
+.page-template-page-home #content .content-area {
+  max-width: 100%;
+  width: 100%; }
 
 .home-toc {
   display: -webkit-box;

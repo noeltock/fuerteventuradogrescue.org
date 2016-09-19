@@ -19,9 +19,11 @@ Tags: charity
 $desktop: 1001px;
 $tablet: 1000px;
 $mobile: 800px;
+$content: 700px;
 $desktop_mq: "all and ( min-width: #{$desktop})";
 $tablet_mq: "all and ( max-width: #{$tablet})";
 $mobile_mq: "all and ( max-width: #{$mobile})";
+$content_mq: "all and ( max-width: #{$content})";
 
 $c-text: #777;
 $c-brand1: #52bbb4;
@@ -112,7 +114,7 @@ body {
   }
 
   .content-area {
-    max-width: 700px;
+    width: $content;
     margin: 0 auto;
     padding-right: 40px;
 
@@ -124,6 +126,10 @@ body {
 
     @media #{$tablet_mq} {
       padding-right: 0;
+    }
+
+    @media #{$content_mq} {
+      max-width: 100%;
     }
 
   }
@@ -370,8 +376,9 @@ body {
 
 /* Template - Home */
 
-.page-template-page-home .content-area {
+.page-template-page-home #content .content-area {
   max-width: 100%;
+  width: 100%;
 }
 
 .home-toc {
