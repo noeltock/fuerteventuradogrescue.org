@@ -21,7 +21,7 @@
 <script src="https://use.typekit.net/lpb6dii.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
 	
-<script src="https://use.fortawesome.com/a5fca50f.js"></script>
+<script src="https://use.fortawesome.com/27872501.js"></script>
 
 <?php wp_head(); ?>
 </head>
