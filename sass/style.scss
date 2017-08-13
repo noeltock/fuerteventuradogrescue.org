@@ -10,12 +10,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: shelter
 Tags: charity
 */
-
-@import "bourbon";
 @import "neat";
 @import "normalize";
 @import "accessibility";
-
 $desktop: 1001px;
 $tablet: 1000px;
 $mobile: 800px;
@@ -24,16 +21,13 @@ $desktop_mq: "all and ( min-width: #{$desktop})";
 $tablet_mq: "all and ( max-width: #{$tablet})";
 $mobile_mq: "all and ( max-width: #{$mobile})";
 $content_mq: "all and ( max-width: #{$content})";
-
 $c-text: #777;
 $c-brand1: #52bbb4;
 $c-brandalt: #a2dbd7;
 $c-brandalt2: #54bcb5;
 $c-brand2: #f07530;
 $c-footer: #4baca5;
-
 /* FOUT / typekit */
-
 .wf-loading {
   color: lighten($c-text, 35%);
 }
@@ -42,9 +36,7 @@ $c-footer: #4baca5;
 .wf-inactive {
   color: $c-text;
 }
-
 /* universal */
-
 * {
   box-sizing: border-box;
 }
@@ -65,17 +57,15 @@ body {
     padding-left: 20px;
   }
 
-  img, figure {
+  figure,
+  img {
     max-width: 100%;
     height: auto;
   }
-
 }
-
 /* layout */
-
-.header-wrap,
-.footer-wrap {
+.footer-wrap,
+.header-wrap {
   background: $c-brandalt;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -90,25 +80,22 @@ body {
   font-weight: 400;
 }
 
-.site-content,
-.site-header,
 .main-navigation,
-.site-footer {
+.site-content,
+.site-footer,
+.site-header {
   @include outer-container(1140px);
-  padding-left: 5%!important;
-  padding-right: 5%!important;
-
+  padding-left: 5% !important;
+  padding-right: 5% !important;
   @media #{$tablet_mq} {
-    padding-left: 3%!important;
-    padding-right: 3%!important;
+    padding-left: 3% !important;
+    padding-right: 3% !important;
   }
-
 }
 
 .site-content {
   padding: 40px 0;
   @include display(flex);
-
   @media #{$tablet_mq} {
     display: block;
   }
@@ -123,31 +110,25 @@ body {
       margin-top: 1em;
       text-align: center;
     }
-
     @media #{$tablet_mq} {
       padding-right: 0;
     }
-
     @media #{$content_mq} {
       max-width: 100%;
     }
-
   }
 
   .widget-area {
     @include flex(0 0 400px);
     border-left: 1px solid #ddd;
     padding-left: 40px;
-
     @media #{$tablet_mq} {
       border: none;
       padding-left: 0;
     }
   }
 }
-
 /* header */
-
 .header-wrap {
   padding-top: 20px;
   min-height: 80px;
@@ -155,14 +136,12 @@ body {
 
 .site-mobile-logo {
   display: none;
-
   @media #{$tablet_mq} {
     display: block;
     height: 140px;
     background: url('../images/logo.png') no-repeat center center;
     background-size: auto 100%;
   }
-
 }
 
 .site-header-inner {
@@ -178,11 +157,8 @@ body {
     @include flex(0 1 auto);
     text-align: right;
   }
-
 }
-
 /* footer */
-
 .footer-terminal {
   background: darken($c-footer, 10%);
   padding: 10px 0;
@@ -199,7 +175,6 @@ body {
   background-position: top left;
   color: #fff;
   font-weight: 400;
-
   @media #{$tablet_mq} {
     background: $c-footer;
   }
@@ -215,11 +190,9 @@ body {
 
     .footer-map {
       @include flex(1);
-
       @media #{$tablet_mq} {
         display: none;
       }
-
     }
 
     .footer-info {
@@ -234,18 +207,12 @@ body {
         > *:first-child {
           margin-top: 0;
         }
-
       }
-
     }
   }
-
 }
-
 /* nav */
-
 .mobile-navigation {
-
   @media #{$desktop_mq} {
     display: none;
   }
@@ -284,15 +251,11 @@ body {
       &:last-child a {
         padding-bottom: 20px;
       }
-
     }
-
   }
-
 }
 
 .desktop-navigation {
-
   @media #{$tablet_mq} {
     display: none;
   }
@@ -337,30 +300,26 @@ body {
           background: url('../images/logo.png') no-repeat center center;
           background-size: cover;
         }
-
         @media #{$tablet_mq} {
-          @include flex(0 0 140px);
+           @include flex(0 0 140px);
           top: 32.5px;
 
           &:before {
             height: 140px;
             width: 140px;
           }
-
         }
-
       }
 
       &:last-child {
         @include linear-gradient(lighten($c-brand2, 5%), darken($c-brand2, 5%));
+
         a {
           text-shadow: 0 1px 1px darken($c-brand2, 10%);
         }
       }
-
     }
   }
-
 }
 
 .hero-wrap {
@@ -371,11 +330,8 @@ body {
   .hero {
     @include outer-container;
   }
-
 }
-
 /* Template - Home */
-
 .page-template-page-home #content .content-area {
   max-width: 100%;
   width: 100%;
@@ -383,11 +339,9 @@ body {
 
 .home-toc {
   @include display(flex);
-
   @media #{$tablet_mq} {
     display: block;
   }
-
 }
 
 .home-toc-item {
@@ -397,11 +351,9 @@ body {
   &:last-child {
     padding-right: 0;
   }
-
   @media #{$tablet_mq} {
     padding-right: 0;
   }
-
 }
 
 .home-toc-icon {
@@ -417,56 +369,54 @@ body {
   text-align: center;
   text-shadow: 0 1px 3px darken($c-brand1, 10%);
 }
-
 /* Other */
-
 figure {
   margin: 0;
 }
 
 .gallery {
-	margin-bottom: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 .gallery-item {
-	display: inline-block;
-	text-align: center;
-	vertical-align: top;
-	width: 100%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
 
-	.gallery-columns-2 & {
-		max-width: 50%;
-	}
+  .gallery-columns-2 & {
+    max-width: 50%;
+  }
 
-	.gallery-columns-3 & {
-		max-width: 33.33%;
-	}
+  .gallery-columns-3 & {
+    max-width: 33.33%;
+  }
 
-	.gallery-columns-4 & {
-		max-width: 25%;
-	}
+  .gallery-columns-4 & {
+    max-width: 25%;
+  }
 
-	.gallery-columns-5 & {
-		max-width: 20%;
-	}
+  .gallery-columns-5 & {
+    max-width: 20%;
+  }
 
-	.gallery-columns-6 & {
-		max-width: 16.66%;
-	}
+  .gallery-columns-6 & {
+    max-width: 16.66%;
+  }
 
-	.gallery-columns-7 & {
-		max-width: 14.28%;
-	}
+  .gallery-columns-7 & {
+    max-width: 14.28%;
+  }
 
-	.gallery-columns-8 & {
-		max-width: 12.5%;
-	}
+  .gallery-columns-8 & {
+    max-width: 12.5%;
+  }
 
-	.gallery-columns-9 & {
-		max-width: 11.11%;
-	}
+  .gallery-columns-9 & {
+    max-width: 11.11%;
+  }
 }
 
 .gallery-caption {
-	display: block;
+  display: block;
 }

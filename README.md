@@ -13,5 +13,5 @@ Clone into a theme folder inside a WordPress installation.
 
 ```bash
 $ npm install
-$ gulp
+$ gulp watch
 ```
