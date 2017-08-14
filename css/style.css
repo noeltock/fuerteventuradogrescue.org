@@ -246,7 +246,7 @@ body {
 /* layout */
 .footer-wrap,
 .header-wrap {
-  background: #a2dbd7;
+  background: #52bbb4;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
@@ -264,7 +264,8 @@ body {
 .site-header {
   max-width: 1140px;
   padding-left: 5% !important;
-  padding-right: 5% !important; }
+  padding-right: 5% !important;
+  margin: 0 auto; }
   @media all and (max-width: 1000px) {
     .main-navigation,
     .site-content,
@@ -341,7 +342,6 @@ body {
 
 .footer-wrap {
   height: 400px;
-  background: #4baca5 url("../images/footer-bg.jpg");
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: top left;
@@ -371,7 +371,8 @@ body {
       -ms-flex-align: center;
       align-items: center;
       -ms-flex-pack: center;
-      justify-content: center; }
+      justify-content: center;
+      padding: 0 20px; }
       .footer-wrap .site-footer .footer-info .footer-info-inner {
         -ms-flex: 1;
         flex: 1; }

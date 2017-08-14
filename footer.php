@@ -16,7 +16,7 @@
 	<div class="footer-wrap">
 		<footer id="colophon" class="site-footer" role="contentinfo">
 			<div class="footer-map">
-				&nbsp;
+				<iframe src="https://snazzymaps.com/embed/9428" width="100%" height="400px" style="border:none;"></iframe>
 			</div>
 			<div class="footer-info">
 				<div class="footer-info-inner">
