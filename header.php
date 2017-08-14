@@ -20,7 +20,7 @@
 
 <script src="https://use.typekit.net/lpb6dii.js"></script>
 <script>try{Typekit.load({ async: true });}catch(e){}</script>
-	
+
 <script src="https://use.fortawesome.com/27872501.js"></script>
 
 <?php wp_head(); ?>
@@ -49,7 +49,14 @@
           &nbsp;
 				</div>
 				<div class="site-header-right">
-					&nbsp;
+					<?php
+          $switcher = array(
+            'show_flags' => 1,
+            'show_names' => 0
+          );
+
+          pll_the_languages( $switcher );
+          ?>
 				</div>
 			</div>
 		</header><!-- #masthead -->

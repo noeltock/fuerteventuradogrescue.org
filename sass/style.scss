@@ -151,11 +151,11 @@ body {
   font-size: 0.8rem;
 
   .site-header-left {
-    flex: 1 0 auto;
+    flex: 1;
   }
 
   .site-header-right {
-    flex: 0 1 auto;
+    flex: 1;
     text-align: right;
   }
 }

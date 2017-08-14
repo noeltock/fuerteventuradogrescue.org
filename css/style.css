@@ -325,11 +325,11 @@ body {
   color: #54bcb5;
   font-size: 0.8rem; }
   .site-header-inner .site-header-left {
-    -ms-flex: 1 0 auto;
-    flex: 1 0 auto; }
+    -ms-flex: 1;
+    flex: 1; }
   .site-header-inner .site-header-right {
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
+    -ms-flex: 1;
+    flex: 1;
     text-align: right; }
 
 /* footer */
