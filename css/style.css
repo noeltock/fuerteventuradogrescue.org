@@ -258,6 +258,35 @@ body {
   z-index: 1;
   font-weight: 400; }
 
+.switcher {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  text-shadow: 0 1px 1px #3e9f98;
+  overflow: auto;
+  font-weight: bold;
+  font-size: 0.8rem;
+  text-transform: uppercase; }
+  .switcher a {
+    color: #fff; }
+  .switcher li {
+    float: left;
+    overflow: auto;
+    display: block; }
+    .switcher li .lang-name {
+      float: left; }
+    .switcher li .lang-flag {
+      position: relative;
+      top: 1px;
+      float: right; }
+    .switcher li a > * {
+      display: inline-block;
+      padding: 0 2px; }
+  .switcher li:first-child {
+    padding-right: 15px; }
+
 .main-navigation,
 .site-content,
 .site-footer,
@@ -322,7 +351,7 @@ body {
 .site-header-inner {
   display: -ms-flexbox;
   display: flex;
-  color: #54bcb5;
+  color: #fff;
   font-size: 0.8rem; }
   .site-header-inner .site-header-left {
     -ms-flex: 1;

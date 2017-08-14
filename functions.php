@@ -76,6 +76,10 @@ function shelter_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+  // Set translation strings
+  pll_register_string( 'Footer Contact Title', 'Contact', 'Theme' );
+  pll_register_string( 'Charity Legal Information', 'Registered Charity in the Canary Islands since April 2013', 'Theme' );
 }
 endif;
 add_action( 'after_setup_theme', 'shelter_setup' );

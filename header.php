@@ -49,14 +49,25 @@
           &nbsp;
 				</div>
 				<div class="site-header-right">
-					<?php
-          $switcher = array(
-            'show_flags' => 1,
-            'show_names' => 0
-          );
+          <ul class="switcher">
+          <?php
+            // https://polylang.pro/doc/function-reference/
 
-          pll_the_languages( $switcher );
+            $translations = pll_the_languages( array( 'raw' => 1 ) );
+
+            foreach ($translations as $key => $value) { ?>
+
+                <li>
+                  <a href="<?php echo $value['url'] ?>">
+                    <div class="lang-name"><?php echo $value['name'] ?></div>
+                    <div class="lang-flag"><img src="<?php echo $value['flag'] ?>" /></div>
+                  </a>
+                </li>
+
+            <?php }
+
           ?>
+          </ul>
 				</div>
 			</div>
 		</header><!-- #masthead -->
