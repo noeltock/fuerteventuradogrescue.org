@@ -46,7 +46,7 @@ body {
   font-family: 'neuzeit-grotesk', 'Helvetica', sans-serif;
   font-weight: 300;
   line-height: 1.6;
-  letter-spacing: 0.03rem;
+  letter-spacing: 0.013rem;
 
   a {
     color: $c-brand1;
@@ -66,14 +66,14 @@ body {
 /* layout */
 .footer-wrap,
 .header-wrap {
-  background: $c-brandalt;
+  background: red;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 .nav-wrap {
   position: relative;
-  @include linear-gradient(lighten($c-brandalt2, 5%), darken($c-brandalt2, 5%));
+  background: linear-gradient(lighten($c-brandalt2, 5%), darken($c-brandalt2, 5%));
   box-shadow: 0 1px 2px 0 rgba(0,0,0,0.2);
   overflow: visible;
   z-index: 1;
@@ -84,7 +84,7 @@ body {
 .site-content,
 .site-footer,
 .site-header {
-  @include outer-container(1140px);
+  max-width: 1140px;
   padding-left: 5% !important;
   padding-right: 5% !important;
   @media #{$tablet_mq} {
@@ -312,7 +312,7 @@ body {
       }
 
       &:last-child {
-        @include linear-gradient(lighten($c-brand2, 5%), darken($c-brand2, 5%));
+        background: linear-gradient(lighten($c-brand2, 5%), darken($c-brand2, 5%));
 
         a {
           text-shadow: 0 1px 1px darken($c-brand2, 10%);
@@ -328,7 +328,7 @@ body {
   min-height: 400px;
 
   .hero {
-    @include outer-container;
+    max-width: 1140px;
   }
 }
 /* Template - Home */
