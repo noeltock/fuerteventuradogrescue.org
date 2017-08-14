@@ -66,7 +66,7 @@ body {
 /* layout */
 .footer-wrap,
 .header-wrap {
-  background: red;
+  background: $c-brandalt;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -95,7 +95,7 @@ body {
 
 .site-content {
   padding: 40px 0;
-  @include display(flex);
+  display: flex;
   @media #{$tablet_mq} {
     display: block;
   }
@@ -119,7 +119,7 @@ body {
   }
 
   .widget-area {
-    @include flex(0 0 400px);
+    flex: 0 0 400px;
     border-left: 1px solid #ddd;
     padding-left: 40px;
     @media #{$tablet_mq} {
@@ -145,16 +145,16 @@ body {
 }
 
 .site-header-inner {
-  @include display(flex);
+  display: flex;
   color: $c-brandalt2;
   font-size: 0.8rem;
 
   .site-header-left {
-    @include flex(1 0 auto);
+    flex: 1 0 auto;
   }
 
   .site-header-right {
-    @include flex(0 1 auto);
+    flex: 0 1 auto;
     text-align: right;
   }
 }
@@ -185,24 +185,24 @@ body {
   }
 
   .site-footer {
-    @include display(flex);
+    display: flex;
     height: 400px;
 
     .footer-map {
-      @include flex(1);
+      flex: 1;
       @media #{$tablet_mq} {
         display: none;
       }
     }
 
     .footer-info {
-      @include flex(1);
-      @include display(flex);
-      @include align-items(center);
-      @include justify-content(center);
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       .footer-info-inner {
-        @include flex(1);
+        flex: 1;
 
         > *:first-child {
           margin-top: 0;
@@ -264,11 +264,11 @@ body {
     position: relative;
     padding: 0;
     margin: 0;
-    @include display(flex);
+    display: flex;
     list-style: none;
 
     li {
-      @include flex(1);
+      flex: 1;
       text-align: center;
       font-size: 16px;
 
@@ -287,7 +287,7 @@ body {
       &.logo {
         position: relative;
         color: transparent;
-        @include flex(0 0 160px);
+        flex: 0 0 160px;
 
         &:before {
           position: absolute;
@@ -301,7 +301,7 @@ body {
           background-size: cover;
         }
         @media #{$tablet_mq} {
-           @include flex(0 0 140px);
+          flex: 0 0 140px;
           top: 32.5px;
 
           &:before {
@@ -338,14 +338,14 @@ body {
 }
 
 .home-toc {
-  @include display(flex);
+  display: flex;
   @media #{$tablet_mq} {
     display: block;
   }
 }
 
 .home-toc-item {
-  @include flex(1);
+  flex: 1;
   padding-right: 40px;
 
   &:last-child {
