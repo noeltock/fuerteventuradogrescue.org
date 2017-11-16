@@ -20,7 +20,7 @@
 			</div>
 			<div class="footer-info">
 				<div class="footer-info-inner">
-					<h2><?php _e( 'Contact', 'fuerteventuradogrescue' ); ?></h2>
+					<h2><?php pll__('Contact'); ?></h2>
 					<p>
 						Fuerteventura Dog Rescue<br/>
 						Ayuntamiento de la Oliva,<br />

@@ -262,7 +262,7 @@ body {
   display: inline-block;
   padding: 8px 16px;
   border-radius: 3px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.1);
   color: #fff;
   text-shadow: 0 1px 1px #3e9f98;
   overflow: auto;
@@ -271,6 +271,8 @@ body {
   text-transform: uppercase; }
   .switcher a {
     color: #fff; }
+    .switcher a:hover {
+      opacity: 0.6; }
   .switcher li {
     float: left;
     overflow: auto;
